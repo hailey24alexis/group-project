@@ -1,5 +1,9 @@
 ---
 title: "group-project"
+authors:
+  - "Hailey"
+  - "Amy"
+embed-resources: true
 ---
 
 ## Quarto
