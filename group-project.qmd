@@ -98,7 +98,7 @@ Fecaldata %>%
 
 **Figure 2**
 
-Our Figure 2 is a recreation of Figure 1C from the original manuscript. We excluded the distinction between the Northern and Southern hemispheres. We rotated the axis to represent a linear timeline of months rather than horizontal. We also altered the color scheme to correlate with the seasonality of the months.
+Our Figure 2 is a recreation of Figure 1C from the original manuscript. We excluded the distinction between the Northern and Southern hemispheres. We rotated the axis to represent a linear timeline of months rather than horizontal. We also altered the color scheme to correlate with the seasonality of the months. These alterations create a figure that reads more naturally and better emphasizes the distribution of samples collected throughout the year.
 
 ```{r}
 Fecaldata %>%
@@ -136,5 +136,3 @@ Fecaldata %>%
     axis.text.x = element_text(angle = 45, hjust = 1)
   )
 ```
-
-Final thoughts
