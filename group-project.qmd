@@ -64,7 +64,9 @@ Fecaldata %>%
 
 ```
 
-Graph 1 - Discussion Amy
+**Figure 1**
+
+Figure 1 below illustrates the distribution of disease categories by sex. To create this figure, data categorized as "unknown" for the variable "Sex" were excluded. This distribution combines figures 1D and 1G from the original manuscript to provide readers with a more comprehensive visual of the data points. Additionally, the figure is color-coded. Male data is represented by blue bars, and female data is represented by pink bars to provide an intuitive distinction between male and female data points.
 
 ```{r}
 library(tidyverse)
@@ -93,6 +95,10 @@ Fecaldata %>%
   ) +
   theme_prism(base_size = 16)
 ```
+
+**Figure 2**
+
+Our Figure 2 is a recreation of Figure 1C from the original manuscript. We excluded the distinction between the Northern and Southern hemispheres. We rotated the axis to represent a linear timeline of months rather than horizontal. We also altered the color scheme to correlate with the seasonality of the months.
 
 ```{r}
 Fecaldata %>%
@@ -130,7 +136,5 @@ Fecaldata %>%
     axis.text.x = element_text(angle = 45, hjust = 1)
   )
 ```
-
-Graph 2 - discussion
 
 Final thoughts
