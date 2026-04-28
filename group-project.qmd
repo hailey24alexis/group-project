@@ -6,9 +6,23 @@ authors:
 embed-resources: true
 ---
 
-## Group Project - ANSI 5553 
+## Group Project - ANSI 5553
 
-Discussion - AMY
+**Paper Summary**
+
+The gut microbiome plays a crucial role in understanding and managing equine health. To date, there is very limited research and data regarding "normal" parameters for the microbiome population, how it changes during times of disease, and potential population indicators of active disease or predisposition. Current data is primarily sourced from small sample sizes with a limited geographic scope.
+
+This study aimed to collect an extensive database, sourcing sample collections from eight teaching hospitals located in three different countries across the globe. A total of 2,362 fecal samples were collected from 1,190 equines along with associated demographic and clinical data from individual animals.
+
+This data was analyzed to determine normal parameters of the healthy equine gut microbiome. Demographic and clinical data were cross-referenced to assess factors influencing variation from normal parameters. This data was also used to identify markers of acute gastrointestinal disease, also known as colic.
+
+The goal of this study was to establish a diversified database that will allow researchers, veterinarians, and owners alike to address gaps in knowledge and assist in future research of related topics and fields.
+
+**The Data**
+
+The supplementary data provided by this study were already thoroughly cleaned. Days of age were converted to years by dividing by 365. Data collected from Australia was transformed based on the associated month of collection to match the seasons of data collected from the United States and the United Kingdom. To further clean the data ourselves, samples categorized as "unknown" in the "Sex" category were excluded to allow for the comparison of rates of disease category between male and female subjects.
+
+The tables and figures presented in the original manuscript were generally helpful in explaining the data and associated results. The way that some of the figures were presented was a bit busy to understand, as they were clustered together within the paper. The colors were somewhat difficult to distinguish, as most of the figures were very monochromatic. The data presented in the figures was relatively easy to interpret and was well-represented by the figures. Included below is an image of Figure 1 included in the original manuscript.
 
 ![](images/42523_2025_493_Fig1_HTML.jpg){fig-align="center"}
 
