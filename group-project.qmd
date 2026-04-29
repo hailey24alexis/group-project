@@ -35,7 +35,7 @@ Figure 1 below illustrates the distribution of disease categories by sex. To cre
 library(tidyverse)
 library(ggprism)
 
-Fecaldata <- read.csv('/Users/haileyobradovich/Desktop/group-project/fecaldata.csv')
+Fecaldata <- read.csv(file = "Fecaldata.csv")
 
 Fecaldata %>%
   filter(
