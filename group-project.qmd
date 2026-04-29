@@ -28,6 +28,7 @@ The tables and figures presented in the original manuscript were generally helpf
 
 ```{r}
 
+
 ```
 
 ```{r}
@@ -69,13 +70,17 @@ Fecaldata %>%
 Figure 1 below illustrates the distribution of disease categories by sex. To create this figure, data categorized as "unknown" for the variable "Sex" were excluded. This distribution combines figures 1D and 1G from the original manuscript to provide readers with a more comprehensive visual of the data points. Additionally, the figure is color-coded. Male data is represented by blue bars, and female data is represented by pink bars to provide an intuitive distinction between male and female data points.
 
 ```{r}
+
 library(tidyverse)
 library(ggprism)
 
 Fecaldata <- read.csv('/Users/haileyobradovich/Desktop/group-project/fecaldata.csv')
 
 Fecaldata %>%
-  filter(!is.na(sex), !is.na(disease_category), sex %in% c("Male", "Female")) %>%
+  filter(
+    !is.na(sex), 
+    !is.na(disease_category), 
+    sex %in% c("Male", "Female")) %>%
   mutate(disease_category = forcats::fct_infreq(disease_category)) %>%
   count(sex, disease_category) %>%
   mutate(n = ifelse(sex == "Male", -n, n)) %>%  # flip males to left
@@ -86,7 +91,8 @@ Fecaldata %>%
     labels = abs,
     breaks = seq(-500, 500, by = 50)
   ) +
-  scale_fill_manual(values = c("Male" = "blue", "Female" = "hotpink")) +
+  scale_fill_manual(
+    values = c("Male" = "blue", "Female" = "hotpink")) +
   labs(
     title = "Sex Distribution by Disease Category",
     x = "Disease Category",
@@ -94,13 +100,17 @@ Fecaldata %>%
     fill = "Sex"
   ) +
   theme_prism(base_size = 16)
+
 ```
 
 **Figure 2**
 
 Our Figure 2 is a recreation of Figure 1C from the original manuscript. We excluded the distinction between the Northern and Southern hemispheres. We rotated the axis to represent a linear timeline of months rather than horizontal. We also altered the color scheme to correlate with the seasonality of the months. These alterations create a figure that reads more naturally and better emphasizes the distribution of samples collected throughout the year.
 
+Graph 1 - Discussion Amy
+
 ```{r}
+
 Fecaldata %>%
   filter(!is.na(collection_date)) %>%
   mutate(
@@ -154,4 +164,3 @@ Fecaldata %>%
   scale_x_continuous(breaks = seq(0, 40, by = 2)) +
   labs(title = "Age Distribution", x = "Age (Years)")
 ```
-
