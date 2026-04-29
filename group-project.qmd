@@ -68,8 +68,6 @@ Fecaldata %>%
 
 Our Figure 2 is a recreation of Figure 1C from the original manuscript. We excluded the distinction between the Northern and Southern hemispheres. We rotated the axis to represent a linear timeline of months rather than horizontal. We also altered the color scheme to correlate with the seasonality of the months. These alterations create a figure that reads more naturally and better emphasizes the distribution of samples collected throughout the year.
 
-Graph 1 - Discussion Amy
-
 ```{r}
 
 Fecaldata %>%
@@ -107,6 +105,10 @@ Fecaldata %>%
     axis.text.x = element_text(angle = 45, hjust = 1)
   )
 ```
+
+**Figure 3**
+
+This figure was created to display a distribution of the ages of subjects used in this data set. Roughly 60 subjects were excluded from this plot as they failed to report an age. The data follows a distinct bell shaped curve with a majority of samples falling between 8 and 11 years old. The plot helps demonstrate that a wide variety of ages were used in the samples collected which furthers the reliability of the subsequent database.
 
 ```{r}
 # Option A: Using base R (No extra libraries needed)
