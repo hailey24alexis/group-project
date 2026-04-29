@@ -26,45 +26,6 @@ The tables and figures presented in the original manuscript were generally helpf
 
 ![](images/42523_2025_493_Fig1_HTML.jpg){fig-align="center"}
 
-```{r}
-
-
-```
-
-```{r}
-library(tidyverse)   
-library(ggprism)
-library(lme4)        
-library(forcats)
-
-
-theme_set(theme_prism())
-
-Fecaldata <- read.csv('/Users/haileyobradovich/Desktop/group-project/fecaldata.csv')
-
-Fecaldata %>%
-  filter(!is.na(sex), sex %in% c("Male", "Female")) %>%
-  mutate(disease_category = forcats::fct_infreq(disease_category)) %>%
-  ggplot(aes(x = disease_category, fill = sex)) +
-  geom_bar(position = position_dodge(width = 0.8), width = 0.7) +
-  coord_flip() +
-  scale_fill_manual(values = c("Male" = "blue", "Female" = "hotpink")) +
-  scale_y_continuous(
-    breaks = seq(0, 550, by = 50),      
-  ) +
-  labs(
-    title = "Sex Distribution by Disease Category",
-    x = "Disease Category",
-    y = "Number of Cases",
-    fill = "Sex"
-  ) +
-  theme_prism(base_size = 16) +
-  theme(
-    panel.grid.minor.y = element_line(color = "grey85") 
-  )
-
-```
-
 **Figure 1**
 
 Figure 1 below illustrates the distribution of disease categories by sex. To create this figure, data categorized as "unknown" for the variable "Sex" were excluded. This distribution combines figures 1D and 1G from the original manuscript to provide readers with a more comprehensive visual of the data points. Additionally, the figure is color-coded. Male data is represented by blue bars, and female data is represented by pink bars to provide an intuitive distinction between male and female data points.
@@ -146,7 +107,6 @@ Fecaldata %>%
     axis.text.x = element_text(angle = 45, hjust = 1)
   )
 ```
-
 
 ```{r}
 # Option A: Using base R (No extra libraries needed)
