@@ -115,11 +115,15 @@ Fecaldata %>%
   filter(!is.na(age_of_collection)) %>%
   mutate(age_years = age_of_collection / 365) %>%
   ggplot(aes(x = age_years)) +
-  geom_histogram(binwidth = 1, fill = "blue", color = "grey") +
+  geom_histogram(aes(y = after_stat(count)),
+                 binwidth = 1,
+                 fill = "blue",
+                 color = "grey") +
   scale_x_continuous(breaks = seq(0, 40, by = 2)) +
   labs(
     title = "Age Distribution",
     x = "Age (Years)",
     y = "Number of Subjects"
-  )
+  ) +
+  theme_minimal()
 ```
